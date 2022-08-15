@@ -1,1 +1,29 @@
+/* START CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+/* END CSS RESET */
+
+html {
+  font-family: Poppins;
+  font-size: 10px;
+  color: white;
+  background-color: rgb(5, 22, 37);
+}
+
+#total-time-display-container {
+  font-size: 6rem;
+}

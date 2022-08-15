@@ -2,9 +2,159 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interval Timer</title>
+    <title>Interval Timer 2</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" />
   </head>
-  <body></body>
+  <body>
+    <!-- TOTAL TIME DISPLAY -->
+    <div id="total-time-display-container">
+      <p id="total-time-display-text">Total Time</p>
+      <div id="total-time-display-div">
+        <p id="total-time-display-hours">00</p>
+        <p id="total-time-display-hours-colon">:</p>
+        <p id="total-time-display-minutes">00</p>
+        <p id="total-time-display-minutes-colon">:</p>
+        <p id="total-time-display-seconds">00</p>
+      </div>
+    </div>
+
+    <!-- INPUT AREA CONTAINER -->
+    <div id="input-area-container">
+      <form action="">
+        <div class="labels">
+          <p class="label">Countdown</p>
+          <p class="label">Reps</p>
+          <p class="label">Work</p>
+          <p class="label">Rest</p>
+          <p class="label">Cooldown</p>
+        </div>
+
+        <div class="inputs">
+          <div class="input-section">
+            <input
+              class="time-input"
+              type="number"
+              id="countdown-minutes"
+              min="0"
+              max="999"
+              placeholder="0 min"
+            />
+            <p class="colon">:</p>
+            <input
+              class="time-input"
+              type="number"
+              id="countdown-seconds"
+              min="0"
+              max="59"
+              placeholder="0 sec"
+            />
+          </div>
+
+          <div class="input-section">
+            <input
+              class="time-input"
+              type="number"
+              id="reps-input"
+              min="0"
+              max="999"
+            />
+          </div>
+
+          <div class="input-section">
+            <input
+              class="time-input"
+              type="number"
+              id="work-minutes"
+              min="0"
+              max="999"
+              placeholder="0 min"
+            />
+            <p class="colon">:</p>
+            <input
+              class="time-input"
+              type="number"
+              id="work-seconds"
+              min="0"
+              max="59"
+              placeholder="0 sec"
+            />
+          </div>
+
+          <div class="input-section">
+            <input
+              class="time-input"
+              type="number"
+              id="rest-minutes"
+              min="0"
+              max="999"
+              placeholder="0 min"
+            />
+            <p class="colon">:</p>
+            <input
+              class="time-input"
+              type="number"
+              id="rest-seconds"
+              min="0"
+              max="59"
+              placeholder="0 sec"
+            />
+          </div>
+
+          <div class="input-section">
+            <input
+              class="time-input"
+              type="number"
+              id="cooldown-minutes"
+              min="0"
+              max="999"
+              placeholder="0 min"
+            />
+            <p class="colon">:</p>
+            <input
+              class="time-input"
+              type="number"
+              id="cooldown-seconds"
+              min="0"
+              max="59"
+              placeholder="0 sec"
+            />
+          </div>
+        </div>
+
+        <div id="start-button">START</div>
+      </form>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar-container">
+      <svg
+        class="progress-bar-svg"
+        viewBox="2 -2 28 36"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle class="progress-bar-bg" r="16" cx="16" cy="16"></circle>
+        <circle class="progress-bar" r="16" cx="16" cy="16"></circle>
+      </svg>
+
+      <div id="progress-bar-text">
+        <p id="progress-bar-text-phase"></p>
+        <div id="progress-bar-text-time">
+          <p id="progress-bar-text-time-hours">00</p>
+          <p id="progress-bar-text-time-hours-colon">:</p>
+          <p id="progress-bar-text-time-minutes">00</p>
+          <p id="progress-bar-text-time-minutes-colon">:</p>
+          <p id="progress-bar-text-time-seconds">00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="./app.js"></script>
+  </body>
 </html>
