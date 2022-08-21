@@ -17,11 +17,15 @@ img {
 }
 /* END CSS RESET */
 
+:root {
+  --main-background-color: rgb(5, 22, 37);
+}
+
 html {
   font-family: Poppins;
   font-size: 10px;
   color: white;
-  background-color: rgb(5, 22, 37);
+  background-color: var(--main-background-color);
 }
 
 body,
@@ -30,15 +34,36 @@ body,
 #input-area-container,
 #progress-bar-container,
 form,
-.inputs {
+.inputs,
+.grid {
   display: grid;
   place-content: center;
   place-items: center;
 }
 
+.grid {
+  grid-auto-flow: row;
+}
+
+.number-input-type-text {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.minutes-grid {
+  margin-right: 3rem;
+}
+
 #total-time-display-container {
   font-size: 6rem;
   line-height: 6rem;
+}
+
+.label {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  color: rgb(154, 200, 241);
 }
 
 .input-section,
@@ -48,6 +73,15 @@ form,
 }
 
 #total-time-display-div {
+}
+
+#input-area-container {
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 /*  */
@@ -67,7 +101,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .number-input {
-  border: 2px solid #ddd;
+  /* border: 2px solid #ddd; */
+  border-radius: 5px;
   display: inline-flex;
 }
 
@@ -79,7 +114,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .number-input button {
   outline: none;
   -webkit-appearance: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   align-items: center;
   justify-content: center;
@@ -108,15 +143,50 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: sans-serif;
   max-width: 5rem;
   padding: 0.5rem;
-  border: solid #ddd;
+  border: solid var(--main-background-color);
   border-width: 0 2px;
   font-size: 2rem;
+  line-height: 2rem;
   height: 3rem;
   font-weight: bold;
   text-align: center;
+}
+
+.plus,
+.minus {
+  background-color: white;
+}
+
+.plus {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.minus {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 /* END NUMBER INPUT SPINNER STYLING */
 /*  */
 /*  */
 /*  */
 /*  */
+
+#reps-input {
+  border-radius: 5px;
+}
+
+#reps-label {
+  margin-bottom: 0.5rem;
+}
+
+#start-button {
+  margin-top: 2rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(154, 200, 241);
+}
+
+/* #db65cc */

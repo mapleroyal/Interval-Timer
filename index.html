@@ -30,103 +30,224 @@
         <div class="inputs">
           <p class="label">Countdown</p>
           <div class="input-section">
-            <input
-              class="time-input"
-              type="number"
-              id="countdown-minutes"
-              min="0"
-              max="999"
-              placeholder="0 min"
-            />
-            <p class="colon">:</p>
-            <input
-              class="time-input"
-              type="number"
-              id="countdown-seconds"
-              min="0"
-              max="59"
-              placeholder="0 sec"
-            />
+            <div class="grid number-input-type-text minutes-grid">
+              <div class="number-input">
+                <button
+                  id="countdown-minutes-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="countdown-minutes"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="countdown-minutes-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Minutes</p>
+            </div>
+
+            <div class="grid number-input-type-text seconds-grid">
+              <div class="number-input">
+                <button
+                  id="countdown-seconds-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="countdown-seconds"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="countdown-seconds-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Seconds</p>
+            </div>
           </div>
 
-          <p class="label">Reps</p>
-          <div class="input-section">
+          <p class="label" id="reps-label">Reps</p>
+          <div class="number-input">
             <input
-              class="time-input"
-              type="number"
               id="reps-input"
+              class="quantity"
               min="0"
-              max="999"
+              name="quantity"
+              value="1"
+              type="number"
             />
           </div>
 
           <p class="label">Work</p>
           <div class="input-section">
-            <input
-              class="time-input"
-              type="number"
-              id="work-minutes"
-              min="0"
-              max="999"
-              placeholder="0 min"
-            />
-            <p class="colon">:</p>
-            <input
-              class="time-input"
-              type="number"
-              id="work-seconds"
-              min="0"
-              max="59"
-              placeholder="0 sec"
-            />
+            <div class="grid number-input-type-text minutes-grid">
+              <div class="number-input">
+                <button
+                  id="work-minutes-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="work-minutes"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="work-minutes-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Minutes</p>
+            </div>
+
+            <div class="grid number-input-type-text seconds-grid">
+              <div class="number-input">
+                <button
+                  id="work-seconds-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="work-seconds"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="work-seconds-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Seconds</p>
+            </div>
           </div>
 
           <p class="label">Rest</p>
           <div class="input-section">
-            <input
-              class="time-input"
-              type="number"
-              id="rest-minutes"
-              min="0"
-              max="999"
-              placeholder="0 min"
-            />
-            <p class="colon">:</p>
-            <input
-              class="time-input"
-              type="number"
-              id="rest-seconds"
-              min="0"
-              max="59"
-              placeholder="0 sec"
-            />
+            <div class="grid number-input-type-text minutes-grid">
+              <div class="number-input">
+                <button
+                  id="rest-minutes-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="rest-minutes"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="rest-minutes-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Minutes</p>
+            </div>
+
+            <div class="grid number-input-type-text seconds-grid">
+              <div class="number-input">
+                <button
+                  id="rest-seconds-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="rest-seconds"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="rest-seconds-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Seconds</p>
+            </div>
           </div>
 
           <p class="label">Cooldown</p>
           <div class="input-section">
-            <input
-              class="time-input"
-              type="number"
-              id="cooldown-minutes"
-              min="0"
-              max="999"
-              placeholder="0 min"
-            />
-            <p class="colon">:</p>
-            <input
-              class="time-input"
-              type="number"
-              id="cooldown-seconds"
-              min="0"
-              max="59"
-              placeholder="0 sec"
-            />
+            <div class="grid number-input-type-text minutes-grid">
+              <div class="number-input">
+                <button
+                  id="cooldown-minutes-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="cooldown-minutes"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="cooldown-minutes-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Minutes</p>
+            </div>
+
+            <div class="grid number-input-type-text seconds-grid">
+              <div class="number-input">
+                <button
+                  id="cooldown-seconds-minus"
+                  class="minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  id="cooldown-seconds"
+                  class="quantity"
+                  min="0"
+                  name="quantity"
+                  value="0"
+                  type="number"
+                />
+                <button
+                  class="plus"
+                  id="cooldown-seconds-plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                ></button>
+              </div>
+              <p>Seconds</p>
+            </div>
           </div>
         </div>
-
-        <div id="start-button">START</div>
       </form>
     </div>
+
+    <button id="start-button">START</button>
 
     <!-- PROGRESS BAR -->
     <div id="progress-bar-container">
