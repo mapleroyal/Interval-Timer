@@ -24,6 +24,99 @@ html {
   background-color: rgb(5, 22, 37);
 }
 
+body,
+#total-time-display-container,
+#total-time-display-div,
+#input-area-container,
+#progress-bar-container,
+form,
+.inputs {
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
 #total-time-display-container {
   font-size: 6rem;
+  line-height: 6rem;
 }
+
+.input-section,
+#total-time-display-div {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+#total-time-display-div {
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/* BEGIN NUMBER INPUT SPINNER STYLING */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type="number"] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: 0.5rem;
+  border: solid #ddd;
+  border-width: 0 2px;
+  font-size: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+/* END NUMBER INPUT SPINNER STYLING */
+/*  */
+/*  */
+/*  */
+/*  */
