@@ -24,6 +24,7 @@ img {
 html {
   font-family: Poppins;
   font-size: 10px;
+  font-weight: bold;
   color: white;
   background-color: var(--main-background-color);
 }
@@ -63,13 +64,32 @@ form,
   font-size: 2rem;
   line-height: 2rem;
   margin-top: 1rem;
-  color: rgb(154, 200, 241);
+  color: black;
+  /* text-shadow: 0.5px 0.5px 0px #ffffff; */
 }
 
 .input-section,
 #total-time-display-div {
   display: grid;
   grid-auto-flow: column;
+}
+
+.input-section {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(200, 200, 200, 0.43);
+}
+
+.no-bottom-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.wide {
+  width: 100%;
+  place-content: center;
+
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(200, 200, 200, 0.43);
 }
 
 #total-time-display-div {
@@ -82,6 +102,21 @@ form,
   padding-top: 0;
   padding-bottom: 1.5rem;
   margin-top: 1rem;
+  background-image: linear-gradient(
+    to right bottom,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 
 /*  */
@@ -132,7 +167,7 @@ input[type="number"]::-webkit-outer-spin-button {
   content: "";
   width: 1rem;
   height: 2px;
-  background-color: #212121;
+  background-color: white;
   transform: translate(-50%, -50%);
 }
 .number-input button.plus:after {
@@ -143,18 +178,19 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: sans-serif;
   max-width: 5rem;
   padding: 0.5rem;
-  border: solid var(--main-background-color);
+  border: none;
   border-width: 0 2px;
   font-size: 2rem;
   line-height: 2rem;
   height: 3rem;
   font-weight: bold;
   text-align: center;
+  background-color: rgba(200, 200, 200, 0.43);
 }
 
 .plus,
 .minus {
-  background-color: white;
+  background-color: rgba(200, 200, 200, 0.43);
 }
 
 .plus {
@@ -165,6 +201,15 @@ input[type="number"]::-webkit-outer-spin-button {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+
+.time-type-text {
+  color: black;
+  /* text-shadow: 0.5px 0.5px 0px #ffffff; */
+}
+
+.quantity {
+  color: white;
+}
 /* END NUMBER INPUT SPINNER STYLING */
 /*  */
 /*  */
@@ -173,6 +218,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #reps-input {
   border-radius: 5px;
+  border: none;
 }
 
 #reps-label {
@@ -180,13 +226,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 #start-button {
+  color: white;
   margin-top: 2rem;
   font-size: 3rem;
   line-height: 3rem;
   padding: 0.75rem 2rem;
   border-radius: 10px;
   border: none;
-  background-color: rgb(154, 200, 241);
+  background-color: rgba(128, 128, 128, 0.43);
 }
 
 /* #db65cc */
