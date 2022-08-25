@@ -114,7 +114,18 @@ form,
     #46eefa,
     #5ffbf1
   );
+  background-image: url("./colors.png");
+  overflow: hidden;
 }
+
+/* .blur {
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 700px;
+  width: 476px;
+  position: absolute;
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+} */
 
 /*  */
 /*  */
