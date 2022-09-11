@@ -23,6 +23,9 @@ let cooldownSecondsMinus = document.querySelector("#cooldown-seconds-minus");
 let cooldownSecondsPlus = document.querySelector("#cooldown-seconds-plus");
 let cooldownMinutes = document.querySelector("#cooldown-minutes");
 let cooldownSeconds = document.querySelector("#cooldown-seconds");
+let reps = document.querySelector("#reps-input");
+let repsMinus = document.querySelector("#reps-input-minus");
+let repsPlus = document.querySelector("#reps-input-plus");
 
 let stepDown = function () {
   this.parentNode.querySelector("input[type=number]").stepDown();
@@ -50,6 +53,8 @@ cooldownMinutesMinus.addEventListener("click", stepDown);
 cooldownMinutesPlus.addEventListener("click", stepUp);
 cooldownSecondsMinus.addEventListener("click", stepDown);
 cooldownSecondsPlus.addEventListener("click", stepUp);
+repsMinus.addEventListener("click", stepDown);
+repsPlus.addEventListener("click", stepUp);
 
 // ALL OF THIS CAN BE REDUCED TO A "LET MINUS", AND "LET PLUS", IF I JUST USE A GENERIC INPUT/PLUS/MINUS FOR EACH THING, AND THEN ONLY GIVE THE VALUE AN ID TO REFERENCE LATER.
-// ALSO, GIVE THE REPS THE SAME GENERIC INPUT/PLUS/MINUS.
+TODO: ALSO, GIVE THE REPS THE SAME GENERIC INPUT/PLUS/MINUS.
