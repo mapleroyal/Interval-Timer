@@ -26,226 +26,239 @@
 
     <!-- INPUT AREA CONTAINER -->
     <div id="input-area-container">
-      <!-- <div class="blur"></div> -->
-      <form action="">
-        <div class="inputs">
-          <p class="label">Countdown</p>
-          <div class="input-section">
-            <div class="grid number-input-type-text minutes-grid">
-              <div class="number-input">
-                <button
-                  id="countdown-minutes-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="countdown-minutes"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="countdown-minutes-plus"
-                  type="button"
-                ></button>
+      <div class="blur">
+        <form action="">
+          <div class="inputs">
+            <p class="label top-label">Countdown</p>
+            <div class="input-section">
+              <div class="grid number-input-type-text minutes-grid">
+                <div class="number-input">
+                  <button
+                    id="countdown-minutes-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="countdown-minutes"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="countdown-minutes-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Minutes</p>
               </div>
-              <p class="time-type-text">Minutes</p>
+
+              <div class="grid number-input-type-text seconds-grid">
+                <div class="number-input">
+                  <button
+                    id="countdown-seconds-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="countdown-seconds"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="countdown-seconds-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Seconds</p>
+              </div>
             </div>
 
-            <div class="grid number-input-type-text seconds-grid">
+            <p class="label">Work</p>
+            <div class="input-section">
+              <div class="grid number-input-type-text minutes-grid">
+                <div class="number-input">
+                  <button
+                    id="work-minutes-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="work-minutes"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="work-minutes-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Minutes</p>
+              </div>
+
+              <div class="grid number-input-type-text seconds-grid">
+                <div class="number-input">
+                  <button
+                    id="work-seconds-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="work-seconds"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="work-seconds-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Seconds</p>
+              </div>
+            </div>
+
+            <p class="label">Rest</p>
+            <div class="input-section">
+              <div class="grid number-input-type-text minutes-grid">
+                <div class="number-input">
+                  <button
+                    id="rest-minutes-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="rest-minutes"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="rest-minutes-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Minutes</p>
+              </div>
+
+              <div class="grid number-input-type-text seconds-grid">
+                <div class="number-input">
+                  <button
+                    id="rest-seconds-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="rest-seconds"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="rest-seconds-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Seconds</p>
+              </div>
+            </div>
+
+            <p class="label" id="reps-label">Reps</p>
+            <div class="number-input wide">
               <div class="number-input">
                 <button
-                  id="countdown-seconds-minus"
+                  id="reps-input-minus"
                   class="minus"
                   type="button"
                 ></button>
                 <input
-                  id="countdown-seconds"
+                  id="reps-input"
                   class="quantity"
                   min="0"
                   name="quantity"
-                  value="0"
+                  value="1"
                   type="number"
                 />
                 <button
                   class="plus"
-                  id="countdown-seconds-plus"
+                  id="reps-input-plus"
                   type="button"
                 ></button>
               </div>
-              <p class="time-type-text">Seconds</p>
+            </div>
+
+            <p class="label">Cooldown</p>
+            <div class="input-section no-bottom-border">
+              <div class="grid number-input-type-text minutes-grid">
+                <div class="number-input">
+                  <button
+                    id="cooldown-minutes-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="cooldown-minutes"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="cooldown-minutes-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Minutes</p>
+              </div>
+
+              <div class="grid number-input-type-text seconds-grid">
+                <div class="number-input">
+                  <button
+                    id="cooldown-seconds-minus"
+                    class="minus"
+                    type="button"
+                  ></button>
+                  <input
+                    id="cooldown-seconds"
+                    class="quantity"
+                    min="0"
+                    name="quantity"
+                    value="0"
+                    type="number"
+                  />
+                  <button
+                    class="plus"
+                    id="cooldown-seconds-plus"
+                    type="button"
+                  ></button>
+                </div>
+                <p class="time-type-text">Seconds</p>
+              </div>
             </div>
           </div>
-
-          <p class="label" id="reps-label">Reps</p>
-          <div class="number-input wide">
-            <input
-              id="reps-input"
-              class="quantity"
-              min="0"
-              name="quantity"
-              value="1"
-              type="number"
-            />
-          </div>
-
-          <p class="label">Work</p>
-          <div class="input-section">
-            <div class="grid number-input-type-text minutes-grid">
-              <div class="number-input">
-                <button
-                  id="work-minutes-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="work-minutes"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="work-minutes-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Minutes</p>
-            </div>
-
-            <div class="grid number-input-type-text seconds-grid">
-              <div class="number-input">
-                <button
-                  id="work-seconds-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="work-seconds"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="work-seconds-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Seconds</p>
-            </div>
-          </div>
-
-          <p class="label">Rest</p>
-          <div class="input-section">
-            <div class="grid number-input-type-text minutes-grid">
-              <div class="number-input">
-                <button
-                  id="rest-minutes-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="rest-minutes"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="rest-minutes-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Minutes</p>
-            </div>
-
-            <div class="grid number-input-type-text seconds-grid">
-              <div class="number-input">
-                <button
-                  id="rest-seconds-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="rest-seconds"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="rest-seconds-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Seconds</p>
-            </div>
-          </div>
-
-          <p class="label">Cooldown</p>
-          <div class="input-section no-bottom-border">
-            <div class="grid number-input-type-text minutes-grid">
-              <div class="number-input">
-                <button
-                  id="cooldown-minutes-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="cooldown-minutes"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="cooldown-minutes-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Minutes</p>
-            </div>
-
-            <div class="grid number-input-type-text seconds-grid">
-              <div class="number-input">
-                <button
-                  id="cooldown-seconds-minus"
-                  class="minus"
-                  type="button"
-                ></button>
-                <input
-                  id="cooldown-seconds"
-                  class="quantity"
-                  min="0"
-                  name="quantity"
-                  value="0"
-                  type="number"
-                />
-                <button
-                  class="plus"
-                  id="cooldown-seconds-plus"
-                  type="button"
-                ></button>
-              </div>
-              <p class="time-type-text">Seconds</p>
-            </div>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <button id="start-button">START</button>
