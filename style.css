@@ -84,11 +84,6 @@ form,
   border-radius: 10px;
 }
 
-/* .no-bottom-border {
-  border-bottom: none;
-  padding-bottom: 0;
-} */
-
 .wide {
   width: fit-content;
   place-content: center;
@@ -98,27 +93,8 @@ form,
 }
 
 #input-area-container {
-  border: 2px solid gray;
   border-radius: 15px;
-  /* padding: 2rem;
-  padding-top: 0;
-  padding-bottom: 1.5rem; */
   margin-top: 1rem;
-  /* background-image: linear-gradient(
-    to right bottom,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  ); */
   background-image: url("./colors.png");
   background-position: center;
   overflow: hidden;
@@ -134,7 +110,6 @@ form,
   height: fit-content;
   width: fit-content;
   padding: 2rem;
-  /* position: absolute; */
   backdrop-filter: blur(40px);
 }
 
@@ -151,7 +126,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .number-input {
-  /* border-radius: 5px; */
   display: inline-flex;
 }
 
@@ -198,7 +172,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 3rem;
   font-weight: bold;
   text-align: center;
-  /* background-color: rgba(200, 200, 200, 0.43); */
   background-color: transparent;
 }
 
