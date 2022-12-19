@@ -33,7 +33,6 @@ body,
 #total-time-display-container,
 #total-time-display-div,
 #input-area-container,
-#progress-bar-container,
 form,
 .inputs,
 .grid {
@@ -217,4 +216,77 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 10px;
   border: none;
   background-color: rgba(128, 128, 128, 0.43);
+  cursor: pointer;
+}
+
+/* PROGRESS BAR */
+:root {
+  --dot-diameter: 325px;
+  --circle-border-width: 3px;
+  --default-color: rgba(0, 255, 242, 0.1);
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-bar-bg {
+  fill: none;
+  stroke: var(--default-color);
+  stroke-width: var(--circle-border-width);
+}
+
+.progress-bar {
+  fill: none;
+  stroke-linecap: round;
+  stroke: rgb(256, 0, 103);
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  stroke-width: var(--circle-border-width);
+  transition: stroke-dashoffset 0s linear;
+  /* will-change: transform; */
+}
+
+#progress-bar-container {
+  display: none;
+  position: relative;
+  width: var(--dot-diameter);
+  height: var(--dot-diameter);
+}
+#progress-bar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  justify-items: center;
+}
+
+#progress-bar-text-time {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+#remaining-time {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: 4.2rem;
+  width: min-content;
+}
+
+#progress-bar-stage {
+  width: max-content;
+}
+
+#remaining-hours,
+#remaining-hours-colon,
+#remaining-minutes,
+#remaining-minutes-colon {
+  display: none;
 }
