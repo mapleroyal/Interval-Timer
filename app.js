@@ -108,21 +108,18 @@ buttons.forEach((button) => {
 // That updates 10x/sec,
 //
 //
-let timer = function (mins, secs) {
-  let countdownTotalSeconds = parseInt(mins) * 60 + parseInt(secs);
+let startTimer = function (minutes, seconds) {
+  let timerTotalSeconds = parseInt(mins) * 60 + parseInt(secs);
 
-  progressBar.style.transitionDuration = `${countdownTotalSeconds}s`;
+  progressBar.style.transitionDuration = `${timerTotalSeconds}s`;
 
-  // Putting this inside a setTimeout solves the problem of it updating "too quickly" and
-  // therefore not animating. Setting the setTimeout to 0 makes it so that there isn't
-  // actually a delay, so it's kind of a hack :).
   setTimeout(() => {
     progressBar.style.strokeDashoffset = "100";
   }, 0);
 
   // given the time in seconds, you can figure out hours, minutes, then remaining seconds
-  let hours = Math.floor(countdownTotalSeconds / 3600);
-  let secondsMinusHours = countdownTotalSeconds - 3600 * hours;
+  let hours = Math.floor(timerTotalSeconds / 3600);
+  let secondsMinusHours = timerTotalSeconds - 3600 * hours;
   let minutes = Math.floor(secondsMinusHours / 60);
   let secondsMinusMinutesAndHours = secondsMinusHours - 60 * minutes;
 
@@ -143,7 +140,24 @@ let timer = function (mins, secs) {
     progressPhaseSeconds.innerHTML = secondsMinusMinutesAndHours;
   }
 };
-timer(countdownMinutes.value, countdownSeconds.value);
+let startTimerClearId = setInterval(startTimer, 100);
+
+
+
+
+
+
+=>
+  setInterval(() => {
+    
+  }, 100);
+startTimer(countdownMinutes.value, countdownSeconds.value);
+let startTimer = timer(mins, secs); // by defining the function timer() here, it necessarily executes it, in other words this is the line used to start the timer, it will require a clearInterval to stop it
+
+// let abcdef = () =
+
+setInterval(() => {}, interval);
+
 //
 //
 //
